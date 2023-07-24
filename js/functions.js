@@ -30,3 +30,61 @@ function addEvent(elem, event, fn) {
 		return { elem: elem, handler: attachHandler, event: event };
 	}
 }
+
+// HTTP request Cross Browser
+var XMLHttpFactories = [
+	function () {
+		return new XMLHttpRequest();
+	},
+	function () {
+		return new ActiveXObject('Msxml3.XMLHTTP');
+	},
+	function () {
+		return new ActiveXObject('Msxml2.XMLHTTP.6.0');
+	},
+	function () {
+		return new ActiveXObject('Msxml2.XMLHTTP.3.0');
+	},
+	function () {
+		return new ActiveXObject('Msxml2.XMLHTTP');
+	},
+	function () {
+		return new ActiveXObject('Microsoft.XMLHTTP');
+	}
+];
+
+function createXMLHTTPObject() {
+	var xmlhttp = false;
+	for (var i = 0; i < XMLHttpFactories.length; i++) {
+		try {
+			xmlhttp = XMLHttpFactories[i]();
+		} catch (e) {
+			continue;
+		}
+		break;
+	}
+	return xmlhttp;
+}
+
+function sendRequest(url, postData, callback) {
+	var req = createXMLHTTPObject();
+	if (!req) return;
+	var method = postData ? 'POST' : 'GET';
+	req.open(method, url, true);
+	req.setRequestHeader('Access-Control-Allow-Origin', true);
+	if (postData)
+		req.setRequestHeader(
+			'Content-type',
+			'application/x-www-form-urlencoded'
+		);
+	req.onreadystatechange = function () {
+		if (req.readyState != 4) return;
+		if (req.status != 200 && req.status != 304) {
+			// alert('HTTP error ' + req.status);
+			return;
+		}
+		callback(req);
+	};
+	if (req.readyState == 4) return;
+	req.send(postData);
+}
