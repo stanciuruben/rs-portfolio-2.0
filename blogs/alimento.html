@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ruben Stanciu - Alimento</title>
+		<meta name="description" content="Alimento's development explained" />
+		<link rel="stylesheet" href="../css/bootstrap-icons.min.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/blogs.css" />
+		<script src="../js/intersection-observer.js"></script>
+		<script src="../js/functions.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<!-- BEGIN NAVBAR -->
+			<nav id="navbar" class="navbar navbar-light bg-light">
+				<div
+					class="container d-flex justify-content-between align-items-center"
+				>
+					<a
+						data-hover="true"
+						class="navbar-logo"
+						href="/"
+						data-hover="true"
+						>.Rs</a
+					>
+				</div>
+			</nav>
+			<!-- END NAVBAR -->
+
+			<article class="container-md main-article">
+				<div class="main-article__header">
+					<h4 class="main-article__header__name">Alimento</h4>
+					<h6 class="main-article__header__date">
+						08 June 2023
+						<small>NEW</small>
+					</h6>
+				</div>
+				<hr />
+				<div class="row">
+					<nav class="col-lg-2 main-article__nav">
+						<dl class="main-article__nav__list">
+							<dt>In this article</dt>
+							<dd>
+								<a data-hover="true" href="#tech-stack">
+									Tech Stack
+								</a>
+							</dd>
+							<dd>
+								<a data-hover="true" href="#how-it-started"
+									>How It Started</a
+								>
+							</dd>
+							<dd>
+								<a data-hover="true" href="#structure"
+									>App Structure</a
+								>
+							</dd>
+							<dd>
+								<a data-hover="true" href="#conclusion"
+									>Conclusion</a
+								>
+							</dd>
+						</dl>
+						<dl class="main-article__nav__list">
+							<dt>External links</dt>
+							<dd>
+								<a
+									data-hover="true"
+									target="_blank"
+									href="https://www.rubenstanciu.com/alimento"
+								>
+									Live Demo
+									<i class="bi bi-box-arrow-up-right"></i>
+								</a>
+							</dd>
+							<dd>
+								<a
+									data-hover="true"
+									target="_blank"
+									href="https://github.com/stanciuruben/alimento"
+								>
+									Source Code
+									<i class="bi bi-box-arrow-up-right"></i>
+								</a>
+							</dd>
+							<dd>
+								<a
+									data-hover="true"
+									target="_blank"
+									href="https://www.rubenstanciu.com"
+								>
+									Homepage
+									<i class="bi bi-box-arrow-up-right"></i>
+								</a>
+							</dd>
+						</dl>
+					</nav>
+					<div class="col-lg-10 relative d-flex flex-column gap-3">
+						<h1 class="main-article__title">
+							Chat-GPT powered meal plan generator and
+							macronutrients tracker.
+						</h1>
+						<h4 class="main-article__author">by Ruben Stanciu</h4>
+						<hr />
+						<dl id="tech-stack" class="main-article__tech-stack">
+							<dt>Tech stack:</dt>
+							<dd>Typescript</dd>
+							<dd>Node</dd>
+							<dd>Express</dd>
+							<dd>Sqlite</dd>
+							<dd>React</dd>
+							<dd>GPT-3 API</dd>
+						</dl>
+						<hr />
+						<img
+							class="main-article__img"
+							src="../img/alimento-mockup.jpg"
+							alt=""
+						/>
+						<hr />
+						<h2 id="how-it-started" class="main-article__subtitle">
+							How it started
+						</h2>
+						<p>
+							After going through a period in my life of unhealthy
+							eating, I was gaining a lot of weight and had the
+							lowest energy and motivation in my life. I needed a
+							change, and in the past year I've gotten really
+							interested in nutrition, and I have done my best to
+							live a healthy lifestyle. Around that time, I also
+							resumed going to the gym after 2-3 years of rest.
+							This new lifestyle brought me into the kitchen, but
+							eating healthy came with a price to pay. Besides the
+							financial cost of healthy food, there was time and
+							effort to put in.
+							<br /><br />
+							While in the kitchen, I started to learn about
+							macronutrients, minerals, and vitamins, which added
+							complexity to the process of cooking and shopping
+							for groceries. To reduce the time spent in the
+							kitchen, I started to write down some meal
+							combinations for one day. This allowed me to spend
+							less time at the grocery store and have more time
+							for myself.
+							<br /><br />
+							When Chat GPT was first released, I started
+							experimenting with it. I saw that it could create
+							instruction lists for various things, and one day I
+							had an idea to speed up my meal preparation process.
+							So I made this app that uses the GPT-3 API to
+							generate meal plans based on the needs of the user.
+							Then save those meal plans and keep track of the
+							macronutrients and kilocalories.
+						</p>
+						<hr />
+						<div class="row">
+							<figure class="col-md">
+								<img
+									class="main-article__img"
+									src="../img/alimento-1.png"
+									alt=""
+								/>
+								<figcaption>
+									Screenshot of the landing page of the
+									Alimento app in full screen on a desktop
+									device.
+								</figcaption>
+							</figure>
+							<figure class="col-md mt-4 mt-md-0">
+								<img
+									class="main-article__img"
+									src="../img/alimento-2.png"
+									alt=""
+								/>
+								<figcaption>
+									Screenshot of the statistics tab in the
+									Alimento app, full screen on a desktop
+									device.
+								</figcaption>
+							</figure>
+						</div>
+						<hr />
+						<h2 id="structure" class="main-article__subtitle mb-3">
+							App Structure
+						</h2>
+						<div class="d-flex align-items-center">
+							<i
+								class="bi bi-terminal main-article__icon me-3"
+							></i>
+							<h5 class="mb-0">Backend</h5>
+						</div>
+						<p>
+							The backend is made with
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://nodejs.org/en"
+								>Node</a
+							>
+							and
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://expressjs.com/"
+								>Express</a
+							>
+							and served by
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://nginx.org/en/"
+								>Ngnix</a
+							>
+							in a Linux environment. It serves the landing page
+							but also has an API for the client. Although
+							unsophisticated, the API does it's job. It has three
+							base routes: /auth, /mealplan, and /user; and a
+							middleware for authentication.
+						</p>
+						<ul class="list-unstyled mb-3">
+							<li>
+								<b>/auth</b> handles the various authentication
+								strategies and the logout of users.
+							</li>
+							<li>
+								<b>/user</b> returns the username and tokens if
+								the client is logged in with a valid session.
+							</li>
+							<li>
+								<b>/mealplan</b> communicates with the GPT-3 API
+								to give it a prompt based on the user inputs in
+								the client, and saves the returned data in the
+								database if the request is successful. It also
+								returns data in different formats based on the
+								client's needs.
+							</li>
+						</ul>
+						<div class="d-flex align-items-center">
+							<i
+								class="bi bi-fingerprint main-article__icon me-3"
+							></i>
+							<h5 class="mb-0">Authentication</h5>
+						</div>
+						<p class="mb-3">
+							In this project, I have implemented an
+							authentication strategy with
+							<a
+								href="https://www.passportjs.org/"
+								data-hover="true"
+								target="_blank"
+								>Passport</a
+							>, a library for
+							<a
+								data-hover="true"
+								href="https://expressjs.com/"
+								target="_blank"
+								>Express</a
+							>. Even though I have implemented strategies with
+							JWT in the past, I wanted to provide users of
+							Alimento with the option to log in with Google, and
+							Passport came in very handy. I loved the
+							implementation process. It is flexible, easy to
+							follow, easy to understand, and customizable in
+							every step of the way; it requires a little setup
+							but saves a lot of time with the prebuilt
+							strategies. The overall development experience
+							allowed me to learn more about Express and
+							middleware.
+						</p>
+						<div class="d-flex align-items-center">
+							<i
+								class="bi bi-aspect-ratio main-article__icon me-3"
+							></i>
+							<h5 class="mb-0">Landing page</h5>
+						</div>
+						<p class="mb-3">
+							The objective of the landing page was to present the
+							app and encourage people to sign up for it. For this
+							purpose, I bought a theme from
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://themeforest.net/"
+								>Themeforest</a
+							>
+							called
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://themeforest.net/item/appilo-app-landing-page/22227898"
+								>Apillo</a
+							>, which I slightly changed to fit the needs of the
+							app. The theme was built on
+							<a
+								data-hover="true"
+								href="https://getbootstrap.com/"
+								>Bootstrap 5</a
+							>, and even though I was not familiar with this CSS
+							toolkit, it was pretty intuitive since I have spent
+							some time building with
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://tailwindcss.com/"
+								>Tailwind</a
+							>. It was a nice experience, and I'm happy with the
+							end result.
+						</p>
+						<div class="d-flex align-items-center">
+							<i
+								class="bi bi-display main-article__icon me-3"
+							></i>
+							<h5 class="mb-0">Client</h5>
+						</div>
+						<p>
+							A
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://react.dev/"
+								>React</a
+							>
+							+
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://vitejs.dev/"
+								>Vite</a
+							>
+							app, following the design of the landing page. The
+							client was the biggest part of this project. The
+							challenge was to develop a simple but engaging UI.
+							The Idea was to have three Different tabs: one for
+							the user data, one for the generated meal plans, and
+							one for an overview of the eating lifestyle. But
+							there are many more moving parts. I've implemented a
+							basic search engine that runs on the client to keep
+							the server free, some data filters, and error
+							handling. The biggest challenge was implementing the
+							statistics view. I had to find some workarounds
+							because of the nature of the GPT-3 text generation,
+							it's impossible to parse that text to get the
+							required data without another AI, so I had to make
+							some strange calculations on the backend, which may
+							not be a 100% accurate representation but is an
+							acceptable solution in this case.
+						</p>
+						<hr />
+						<h2 id="conclusion" class="main-article__subtitle">
+							Conclusion
+						</h2>
+						<p>
+							From design to deployment, all I can say is that I
+							enjoyed every part of this process. Knowing that it
+							can be improved, I'm happy with how it turned out in
+							the end. The purpose was to make a system for
+							generating and tracking meal plans, and it does that
+							job pretty well. One thing that I will do
+							differently on the next project is start with a
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://en.wikipedia.org/wiki/Test-driven_development"
+								>TTD</a
+							>
+							approach. In this case, the code is understandable
+							without tests, but if I were to add more
+							functionalities, it would immediately become legacy
+							code and therefore harder to change and update
+							without wasting a lot of time in the process. For
+							now, I don't plan to expand on this project any
+							further.
+						</p>
+					</div>
+				</div>
+			</article>
+
+			<section class="carousel-container">
+				<h2 class="carousel-title">View other Projects</h2>
+				<div id="carouselExampleDark" class="carousel slide">
+					<div class="carousel-inner">
+						<div
+							class="carousel-item active"
+							data-bs-interval="10000"
+						>
+							<img
+								src="../img/studone-mockup.jpg"
+								class="carousel-item-img"
+								alt="..."
+							/>
+							<a
+								data-hover="true"
+								href="studone.html"
+								class="carousel-caption"
+							>
+								<strong>Studone</strong>
+								<span>A study enhancement web application</span>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="2000">
+							<img
+								src="../img/dezvu-mockup.jpg"
+								class="carousel-item-img"
+								alt="..."
+							/>
+							<a
+								data-hover="true"
+								href="dezvu.html"
+								class="carousel-caption"
+							>
+								<strong>Dezvu</strong>
+								<span
+									>A landingpage for a marketing agency</span
+								>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../img/drivenow-mockup.jpg"
+								class="carousel-item-img"
+								alt="..."
+							/>
+							<a
+								data-hover="true"
+								href="drivenow.html"
+								class="carousel-caption"
+							>
+								<strong>Drivenow</strong>
+								<span
+									>A landingpage for car rental company</span
+								>
+							</a>
+						</div>
+					</div>
+					<div class="carousel-indicators">
+						<button
+							data-hover="true"
+							type="button"
+							data-bs-target="#carouselExampleDark"
+							data-bs-slide-to="0"
+							class="active"
+							aria-current="true"
+							aria-label="Slide 1"
+						></button>
+						<button
+							data-hover="true"
+							type="button"
+							data-bs-target="#carouselExampleDark"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+						></button>
+						<button
+							data-hover="true"
+							type="button"
+							data-bs-target="#carouselExampleDark"
+							data-bs-slide-to="2"
+							aria-label="Slide 3"
+						></button>
+					</div>
+					<button
+						data-hover="true"
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#carouselExampleDark"
+						data-bs-slide="prev"
+					>
+						<span
+							class="carousel-control-prev-icon"
+							aria-hidden="true"
+						></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						data-hover="true"
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#carouselExampleDark"
+						data-bs-slide="next"
+					>
+						<span
+							class="carousel-control-next-icon"
+							aria-hidden="true"
+						></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</section>
+
+			<footer class="py-2">
+				<p class="container pt-4">
+					Developed with love by <strong>Ruben Stanciu</strong> © 2023
+				</p>
+			</footer>
+		</main>
+
+		<a
+			data-bs-toggle="tooltip"
+			data-bs-placement="left"
+			data-bs-title="Back to top"
+			href="#"
+			data-hover="true"
+			id="back-to-top"
+			aria-label="Back to top"
+		>
+			<i class="bi bi-chevron-up"></i>
+		</a>
+
+		<!-- START CURSOR -->
+		<div id="cursor-1"></div>
+		<div id="cursor-2"></div>
+		<!-- END CURSOR -->
+
+		<script src="../js/bootstrap-bundle.min.js"></script>
+		<script src="../js/main.js"></script>
+	</body>
+</html>

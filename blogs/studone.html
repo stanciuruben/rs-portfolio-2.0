@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ruben Stanciu - Studone</title>
+		<meta name="description" content="Studone's development explained" />
+		<link rel="stylesheet" href="../css/bootstrap-icons.min.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/blogs.css" />
+		<script src="../js/intersection-observer.js"></script>
+		<script src="../js/functions.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<!-- BEGIN NAVBAR -->
+			<nav id="navbar" class="navbar navbar-light bg-light">
+				<div
+					class="container d-flex justify-content-between align-items-center"
+				>
+					<a
+						data-hover="true"
+						class="navbar-logo"
+						href="/"
+						data-hover="true"
+						>.Rs</a
+					>
+				</div>
+			</nav>
+			<!-- END NAVBAR -->
+
+			<article class="container-md main-article">
+				<div class="main-article__header">
+					<h4 class="main-article__header__name">Studone</h4>
+					<h6 class="main-article__header__date">
+						20 June 2023
+						<small>NEW</small>
+					</h6>
+				</div>
+				<hr />
+				<div class="row">
+					<nav class="col-lg-2 main-article__nav">
+						<dl class="main-article__nav__list">
+							<dt>In this article</dt>
+							<dd>
+								<a data-hover="true" href="#tech-stack">
+									Tech Stack
+								</a>
+							</dd>
+							<dd>
+								<a data-hover="true" href="#how-it-started"
+									>How It Started</a
+								>
+							</dd>
+							<dd>
+								<a data-hover="true" href="#features"
+									>Main Features</a
+								>
+							</dd>
+							<dd>
+								<a data-hover="true" href="#structure"
+									>App Structure</a
+								>
+							</dd>
+							<dd>
+								<a data-hover="true" href="#conclusion"
+									>Conclusion</a
+								>
+							</dd>
+						</dl>
+						<dl class="main-article__nav__list">
+							<dt>External links</dt>
+							<dd>
+								<a
+									data-hover="true"
+									target="_blank"
+									href="https://www.rubenstanciu.com/studone"
+								>
+									Live Demo
+									<i class="bi bi-box-arrow-up-right"></i>
+								</a>
+							</dd>
+							<dd>
+								<a
+									data-hover="true"
+									target="_blank"
+									href="https://github.com/stanciuruben/studone"
+								>
+									Source Code
+									<i class="bi bi-box-arrow-up-right"></i>
+								</a>
+							</dd>
+							<dd>
+								<a
+									data-hover="true"
+									target="_blank"
+									href="https://www.rubenstanciu.com"
+								>
+									Homepage
+									<i class="bi bi-box-arrow-up-right"></i>
+								</a>
+							</dd>
+						</dl>
+					</nav>
+					<div class="col-lg-10 relative d-flex flex-column gap-3">
+						<h1 class="main-article__title">
+							Study enhancement web application.
+						</h1>
+						<h4 class="main-article__author">by Ruben Stanciu</h4>
+						<hr />
+						<dl id="tech-stack" class="main-article__tech-stack">
+							<dt>Tech stack:</dt>
+							<dd>Typescript</dd>
+							<dd>Next</dd>
+							<dd>Sql</dd>
+							<dd>Tailwind</dd>
+						</dl>
+						<hr />
+						<img
+							class="main-article__img"
+							src="../img/studone-mockup.jpg"
+							alt=""
+						/>
+						<hr />
+						<h2 id="how-it-started" class="main-article__subtitle">
+							How it started
+						</h2>
+						<p>
+							This app idea wasn't mine. A few months ago, I met a
+							stranger from the other side of the globe on a
+							Discord server. He had this vision of an app that
+							helps students learn more efficiently and organize
+							their time so that they can spend less time
+							learning. I thought that it was a cool idea, so I
+							joined to create an MVP and test it out. The purpose
+							of this app is to give the user multiple attested
+							learning techniques and group them under one
+							umbrella while keeping it simple. There are many
+							productivity apps of this type; the most famous one
+							is Notion. While Notion offers tools to use the same
+							learning techniques as Studone, it's much harder to
+							set up. Studone has all of these features right out
+							of the box. So with the motivation to help students
+							and create useful software, our journey started with
+							designing and developing the MVP.
+						</p>
+						<hr />
+						<div class="row">
+							<figure class="col-md">
+								<img
+									class="main-article__img"
+									src="../img/studone-1.png"
+									alt=""
+								/>
+								<figcaption>
+									Screenshot of the mindmap editor in the
+									Studone app in full screen on a desktop
+									device.
+								</figcaption>
+							</figure>
+							<figure class="col-md mt-4 mt-md-0">
+								<img
+									class="main-article__img"
+									src="../img/studone-2.png"
+									alt=""
+								/>
+								<figcaption>
+									Screenshot of the summary editor tab in the
+									Studone app, full screen on a desktop
+									device.
+								</figcaption>
+							</figure>
+						</div>
+						<hr />
+						<h2 id="features" class="main-article__subtitle">
+							Main Features
+						</h2>
+						<p>
+							The MVP has four main learning methods: learning
+							using flashcards based on active recall, quiz-type
+							learning where you get a multiple-choice answer,
+							filling out missing parts of mindmaps, and writing
+							summaries and then filling out missing words from
+							summaries. The MVP provides a text editor to write
+							notes with text highlight capabilities.
+							<br /><br />
+							All these methods are organized by topics and
+							subjects. Each topic has a name, a number of days
+							between exercises, and an expiration date. This
+							topic refers to a set of data containing the methods
+							mentioned above as well as editors for each method.
+							All the topics are shown as an overview in the
+							dashboard calendar, so whenever a user logs in, he
+							or she sees immediately what the topics for today
+							are, as well as an overview of the current month.
+						</p>
+						<div class="row">
+							<figure class="col-md">
+								<img
+									class="main-article__img--contain"
+									src="../img/studone-4.png"
+									alt=""
+								/>
+								<figcaption class="text-center">
+									Screenshot of the dashboard calendar in the
+									Studone app.
+								</figcaption>
+							</figure>
+							<figure class="col-md mt-4 mt-md-0">
+								<img
+									class="main-article__img--contain"
+									src="../img/studone-3.png"
+									alt=""
+								/>
+								<figcaption class="text-center">
+									Screenshot of the learning methods in the
+									Studone app.
+								</figcaption>
+							</figure>
+						</div>
+						<hr />
+						<h2 id="structure" class="main-article__subtitle mb-3">
+							App Structure
+						</h2>
+						<div class="d-flex align-items-center">
+							<i
+								class="bi bi-terminal main-article__icon me-3"
+							></i>
+							<h5 class="mb-0">Backend</h5>
+						</div>
+						<p>
+							The backend is made with
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://nextjs.org/"
+								>Next</a
+							>
+							and served by
+							<a
+								data-hover="true"
+								target="_blank"
+								href="https://nginx.org/en/"
+								>Ngnix</a
+							>
+							in a Linux environment. Using Next comes with an
+							out-of-the-box setup, which makes API development
+							effortless. The API has three base routes: /auth for
+							authentication, /data/[dataype] for CRUD operations
+							with the app data, and /payments for payments.
+						</p>
+						<div class="d-flex align-items-center">
+							<i
+								class="bi bi-fingerprint main-article__icon me-3"
+							></i>
+							<h5 class="mb-0">Authentication</h5>
+						</div>
+						<p class="mb-3">
+							Next comes with
+							<a
+								href="https://next-auth.js.org/"
+								data-hover="true"
+								target="_blank"
+								>Next-Auth</a
+							>, which is by far the easiest type of user
+							authentication I have ever implemented in a web app.
+							It is easy to understand and fast. But it comes with
+							its downsides; for example, the sign-in function
+							runs on every page request, and because Next uses a
+							per-page router, it makes the app navigation slower
+							than it should. This problem caused me to revert
+							back to a React router to avoid checking the payment
+							status between app screens, which makes the whole
+							Next router kind of useless.
+						</p>
+						<div class="d-flex align-items-center">
+							<i class="bi bi-paypal main-article__icon me-3"></i>
+							<h5 class="mb-0">Payments</h5>
+						</div>
+						<p class="mb-3">
+							In this app, I have Implemented a subscription
+							solution with PayPal. It was the first time I
+							implemented real payment into a website, and the
+							integration process took me a while to understand.
+							In part because of the way information is organized
+							in the PayPal documentation and because of my lack
+							of experience. But in the end, I figured it out,
+							which gives me more confidence in my abilities.
+						</p>
+						<div class="d-flex align-items-center">
+							<i
+								class="bi bi-aspect-ratio main-article__icon me-3"
+							></i>
+							<h5 class="mb-0">Landing page</h5>
+						</div>
+						<p class="mb-3">
+							Since this version of the app is only an MVP, we
+							didn't want to invest any money, so I came up with
+							the design for the landing page. I definitely
+							wouldn't consider myself even close to a designer,
+							but I still made this design with the design
+							principles I already knew (e.g., spacing, hierarchy,
+							contrast). And I can't complain too much about the
+							outcome; it fits the style we went for, but it could
+							be improved without a doubt. After the hard part was
+							done, putting it into code was a piece of cake with
+							the Next and Tailwind combination. Also because
+							Tailwind is the fastest way to write CSS, in my
+							opinion.
+						</p>
+						<div class="d-flex align-items-center">
+							<i
+								class="bi bi-display main-article__icon me-3"
+							></i>
+							<h5 class="mb-0">Client</h5>
+						</div>
+						<p>
+							By far the most challenging part of the project. The
+							client incorporates many third-party libraries for
+							the various UI tasks that it needs to accomplish.
+							And while saving time on those tasks, the libraries
+							still require a lot of polishing to become part of
+							the app in a way that doesn't feel strange. The
+							component library used is
+							<a
+								href="https://flowbite.com/"
+								target="_blank"
+								data-hover="true"
+								>Flowbite</a
+							>, which is a Tailwind-based UI library with
+							minimalistic components.
+						</p>
+						<hr />
+						<h2 id="conclusion" class="main-article__subtitle">
+							Conclusion
+						</h2>
+						<p>
+							The app in its current state is not market-ready. It
+							requires a lot of polishing and many more features,
+							which we plan to add in the long run. With that
+							said, I have learned a ton of things working on this
+							web application. I learned about time management,
+							the importance of modularization, collaboration with
+							other programmers, and how vital unit tests are. I'm
+							glad about this experience and would love to see
+							this product out there providing value to students.
+						</p>
+					</div>
+				</div>
+			</article>
+
+			<section class="carousel-container">
+				<h2 class="carousel-title">View other Projects</h2>
+				<div id="carouselExampleDark" class="carousel slide">
+					<div class="carousel-inner">
+						<div
+							class="carousel-item active"
+							data-bs-interval="10000"
+						>
+							<img
+								src="../img/alimento-mockup.jpg"
+								class="carousel-item-img"
+								alt="..."
+							/>
+							<a
+								data-hover="true"
+								href="alimento.html"
+								class="carousel-caption"
+							>
+								<strong>Alimento</strong>
+								<span
+									>Chat-GPT powered meal plan generator and
+									macronutrients tracker</span
+								>
+							</a>
+						</div>
+						<div class="carousel-item" data-bs-interval="2000">
+							<img
+								src="../img/dezvu-mockup.jpg"
+								class="carousel-item-img"
+								alt="..."
+							/>
+							<a
+								data-hover="true"
+								href="dezvu.html"
+								class="carousel-caption"
+							>
+								<strong>Dezvu</strong>
+								<span
+									>A landingpage for a marketing agency</span
+								>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../img/drivenow-mockup.jpg"
+								class="carousel-item-img"
+								alt="..."
+							/>
+							<a
+								data-hover="true"
+								href="drivenow.html"
+								class="carousel-caption"
+							>
+								<strong>Drivenow</strong>
+								<span
+									>A landingpage for car rental company</span
+								>
+							</a>
+						</div>
+					</div>
+					<div class="carousel-indicators">
+						<button
+							data-hover="true"
+							type="button"
+							data-bs-target="#carouselExampleDark"
+							data-bs-slide-to="0"
+							class="active"
+							aria-current="true"
+							aria-label="Slide 1"
+						></button>
+						<button
+							data-hover="true"
+							type="button"
+							data-bs-target="#carouselExampleDark"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+						></button>
+						<button
+							data-hover="true"
+							type="button"
+							data-bs-target="#carouselExampleDark"
+							data-bs-slide-to="2"
+							aria-label="Slide 3"
+						></button>
+					</div>
+					<button
+						data-hover="true"
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#carouselExampleDark"
+						data-bs-slide="prev"
+					>
+						<span
+							class="carousel-control-prev-icon"
+							aria-hidden="true"
+						></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						data-hover="true"
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#carouselExampleDark"
+						data-bs-slide="next"
+					>
+						<span
+							class="carousel-control-next-icon"
+							aria-hidden="true"
+						></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</section>
+
+			<footer class="py-2">
+				<p class="container pt-4">
+					Developed with love by <strong>Ruben Stanciu</strong> © 2023
+				</p>
+			</footer>
+		</main>
+
+		<a
+			data-bs-toggle="tooltip"
+			data-bs-placement="left"
+			data-bs-title="Back to top"
+			href="#"
+			data-hover="true"
+			id="back-to-top"
+			aria-label="Back to top"
+		>
+			<i class="bi bi-chevron-up"></i>
+		</a>
+
+		<!-- START CURSOR -->
+		<div id="cursor-1"></div>
+		<div id="cursor-2"></div>
+		<!-- END CURSOR -->
+
+		<script src="../js/bootstrap-bundle.min.js"></script>
+		<script src="../js/main.js"></script>
+	</body>
+</html>

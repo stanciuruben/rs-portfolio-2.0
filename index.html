@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ruben Stanciu</title>
+		<meta
+			name="description"
+			content="Ruben Stanciu's personal portfolio website."
+		/>
+		<link rel="stylesheet" href="./css/bootstrap-icons.min.css" />
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<script src="./js/intersection-observer.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<!-- BEGIN WATERMARKS -->
+			<div id="watermarks-container">
+				<div id="watermark-1"></div>
+				<div id="watermark-2"></div>
+				<div id="watermark-3"></div>
+				<div id="watermark-4"></div>
+			</div>
+			<!-- END WATERMARKS -->
+
+			<!-- BEGIN NAVBAR -->
+			<nav
+				id="navbar"
+				class="navbar navbar-expand-lg navbar-light fixed-top bg-light"
+			>
+				<div
+					class="container d-flex justify-content-between align-items-center"
+				>
+					<a class="navbar-logo" href="#" data-hover="true">.Rs</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarScroll"
+						aria-controls="navbarScroll"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div
+						class="collapse navbar-collapse justify-content-end"
+						id="navbarScroll"
+					>
+						<ul
+							class="navbar-nav my-2 my-lg-0"
+							style="--bs-scroll-height: 100px"
+						>
+							<li class="nav-item" data-hover="true">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="/#"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item" data-hover="true">
+								<a class="nav-link" href="/#skills">Skills</a>
+							</li>
+							<li class="nav-item" data-hover="true">
+								<a class="nav-link" href="/#about">About</a>
+							</li>
+							<li class="nav-item" data-hover="true">
+								<a class="nav-link" href="/#portfolio"
+									>Portfolio</a
+								>
+							</li>
+							<li class="nav-item" data-hover="true">
+								<a class="nav-link" href="/#contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- END NAVBAR -->
+
+			<!--  START BANNER -->
+			<section class="main-banner">
+				<div class="main-banner-overlay" aria-hidden="true">
+					<img
+						class="main-banner-overlay--1"
+						src="./img/ruben.svg"
+						alt=""
+					/>
+					<img
+						class="main-banner-overlay--2"
+						src="./img/stanciu.svg"
+						alt=""
+					/>
+				</div>
+				<div class="row container mx-auto align-items-center">
+					<div class="col-lg">
+						<h1 class="main-title">
+							<div class="main-title__leaf--1">Hello I'm</div>
+							<div class="main-title__leaf--2">Ruben Stanciu</div>
+						</h1>
+						<h2 class="main-subtitle">
+							Web Developer based in Austria
+						</h2>
+						<div class="my-4 main-cta">
+							<a
+								class="btn btn-primary me-3"
+								href="#portfolio"
+								data-hover="true"
+								>See my work</a
+							>
+							<a
+								class="btn text-white"
+								href="#contact"
+								data-hover="true"
+								>Contact me</a
+							>
+						</div>
+					</div>
+					<div class="col-lg">
+						<div class="main-img-container">
+							<img
+								class="w-100"
+								src="./img/banner-img.png"
+								alt="Picture of Ruben Stanciu wearing a white shirt and glasses"
+							/>
+							<div
+								class="main-img-text"
+								aria-label='Rotating text saying: "Creative Web Developer from Romania"'
+							>
+								<img src="./img/banner-text.svg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--  END BANNER -->
+
+			<!--  START SKILLS -->
+			<section id="skills" class="skills">
+				<div class="text-center my-5">
+					<h2 class="heading-1">My Skills</h2>
+				</div>
+				<div class="skills-grid container">
+					<ul class="row list-unstyled">
+						<li class="skills-grid-item opacity" data-title="HTML">
+							<figure>
+								<img
+									src="./img/icons/HTML.svg"
+									alt="HTML logo"
+								/>
+								<figcaption>HTML</figcaption>
+							</figure>
+						</li>
+						<li class="skills-grid-item opacity" data-title="CSS">
+							<figure>
+								<img src="./img/icons/CSS.svg" alt="CSS logo" />
+								<figcaption>CSS</figcaption>
+							</figure>
+						</li>
+						<li class="skills-grid-item" data-title="Javascript">
+							<figure>
+								<img
+									src="./img/icons/JS.svg"
+									alt="Javascript logo"
+								/>
+								<figcaption>Javascript</figcaption>
+							</figure>
+						</li>
+						<li
+							class="skills-grid-item opacity"
+							data-title="Typescript"
+						>
+							<figure>
+								<img
+									src="./img/icons/TS.svg"
+									alt="Typescript logo"
+								/>
+								<figcaption>Typescript</figcaption>
+							</figure>
+						</li>
+						<li class="skills-grid-item" data-title="React">
+							<figure>
+								<img
+									src="./img/icons/REACT.svg"
+									alt="ReactJS logo"
+								/>
+								<figcaption>React JS</figcaption>
+							</figure>
+						</li>
+						<li
+							class="skills-grid-item opacity"
+							data-title="Next JS"
+						>
+							<figure>
+								<img
+									src="./img/icons/NEXT.svg"
+									alt="NextJS logo"
+								/>
+								<figcaption>Next JS</figcaption>
+							</figure>
+						</li>
+						<li class="skills-grid-item" data-title="Node JS">
+							<figure>
+								<img
+									src="./img/icons/NODE.svg"
+									alt="NodeJS logo"
+								/>
+								<figcaption>Node JS</figcaption>
+							</figure>
+						</li>
+						<li class="skills-grid-item opacity" data-title="Sql">
+							<figure>
+								<img src="./img/icons/SQL.svg" alt="SQL logo" />
+								<figcaption>SQL</figcaption>
+							</figure>
+						</li>
+						<li class="skills-grid-item opacity" data-title="Git">
+							<figure>
+								<img src="./img/icons/GIT.svg" alt="Git logo" />
+								<figcaption>GIT</figcaption>
+							</figure>
+						</li>
+						<li class="skills-grid-item" data-title="Figma">
+							<figure>
+								<img
+									src="./img/icons/FIGMA.svg"
+									alt="Figma logo"
+								/>
+								<figcaption>Figma</figcaption>
+							</figure>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!--  END SKILLS -->
+
+			<!--  START ABOUT -->
+			<section id="about" class="about row gap-5 container">
+				<div class="about__img col-lg">
+					<img
+						class="about__img__1"
+						src="./img/about.jpg"
+						alt="Selfie style photo of Ruben Stanciu at his home office."
+					/>
+					<img
+						class="about__img__2"
+						src="./img/about-1.jpg"
+						alt="Photo of Ruben Stanciu while doing a bench execise at the GYM"
+					/>
+				</div>
+				<div class="about__content col-lg">
+					<h2 class="heading-1 about__content__heading">About Me</h2>
+					<p class="about__content__text">
+						I'm a passionate web developer from Romania. My journey
+						into programming began a few years ago, when I started
+						to learn the fundamentals of data structures and
+						algorithms. I later learned about the web and all of its
+						turmoil and beauty. Since then, I've been coding in my
+						spare time and have developed a passion for creating
+						small projects and trying new things. Check out a few of
+						those projects in the list below.
+						<br /><br />
+						Italian, German, English, and Romanian are the languages
+						I speak.
+						<br />
+						I enjoy going to the gym, hanging out with friends, and
+						reading nonfiction books when I'm not coding.
+					</p>
+				</div>
+			</section>
+			<!--  END ABOUT -->
+
+			<!--  START PORTFOLIO -->
+			<section id="portfolio" class="portfolio container">
+				<div class="text-center my-5">
+					<h2 class="heading-1">Portfolio</h2>
+				</div>
+				<ul class="portfolio__projects list-unstyled">
+					<div class="row gap-5">
+						<li
+							tabindex="0"
+							class="portfolio__projects__item col-lg"
+						>
+							<img
+								class="portfolio__projects__item__img"
+								src="./img/studone-mockup.jpg"
+								alt="Mockup of Studone Project landing page"
+							/>
+							<div class="portfolio__projects__item__content">
+								<hgroup>
+									<h4
+										class="portfolio__projects__item__content__heding"
+									>
+										Studone
+									</h4>
+									<h3
+										class="portfolio__projects__item__content__descripition"
+									>
+										A study enhancement web application
+									</h3>
+								</hgroup>
+								<div>
+									<ul class="list-unstyled d-flex flex-wrap">
+										<li class="me-3">
+											<strong>TYPESCRIPT</strong>
+										</li>
+										<li class="me-3">
+											<strong>NEXT JS</strong>
+										</li>
+										<li class="me-3">
+											<strong>TAILWIND CSS</strong>
+										</li>
+										<li><strong>SQL</strong></li>
+									</ul>
+									<a
+										href="/studone"
+										class="btn btn-dark mt-3"
+										target="_blank"
+										data-hover="true"
+									>
+										<span class="me-2">View Site</span>
+										<i class="bi bi-box-arrow-up-right"></i>
+									</a>
+									<a
+										href="blogs/studone.html"
+										class="btn btn-light mt-3"
+										data-hover="true"
+									>
+										Learn More
+									</a>
+								</div>
+							</div>
+						</li>
+						<li
+							tabindex="0"
+							class="portfolio__projects__item col-lg"
+						>
+							<img
+								class="portfolio__projects__item__img"
+								src="./img/alimento-mockup.jpg"
+								alt="Mockup of Studone Project landing page"
+							/>
+							<div class="portfolio__projects__item__content">
+								<hgroup>
+									<h4
+										class="portfolio__projects__item__content__heding"
+									>
+										Alimento
+									</h4>
+									<h3
+										class="portfolio__projects__item__content__descripition"
+									>
+										Chat-GPT powered mealplan generator and
+										macro nutrients tracker
+									</h3>
+								</hgroup>
+								<div>
+									<ul class="list-unstyled d-flex flex-wrap">
+										<li class="me-3">
+											<strong>TYPESCRIPT</strong>
+										</li>
+										<li class="me-3">
+											<strong>NODE JS</strong>
+										</li>
+										<li class="me-3">
+											<strong>EXPRESS JS</strong>
+										</li>
+										<li class="me-3">
+											<strong>REACT</strong>
+										</li>
+										<li class="me-3">
+											<strong>SQLITE</strong>
+										</li>
+										<li><strong>GPT-3</strong></li>
+									</ul>
+									<a
+										href="/alimento"
+										class="btn btn-dark mt-3"
+										data-hover="true"
+										target="_blank"
+									>
+										<span class="me-2">View Site</span>
+										<i class="bi bi-box-arrow-up-right"></i>
+									</a>
+									<a
+										href="blogs/alimento.html"
+										class="btn btn-light mt-3"
+										data-hover="true"
+									>
+										Learn More
+									</a>
+								</div>
+							</div>
+						</li>
+					</div>
+					<div class="row gap-5 mt-5">
+						<li
+							tabindex="0"
+							class="portfolio__projects__item col-lg"
+						>
+							<img
+								class="portfolio__projects__item__img"
+								src="./img/dezvu-mockup.jpg"
+								alt="Mockup of Studone Project landing page"
+							/>
+							<div class="portfolio__projects__item__content">
+								<hgroup>
+									<h4
+										class="portfolio__projects__item__content__heding"
+									>
+										Dezvu
+									</h4>
+									<h3
+										class="portfolio__projects__item__content__descripition"
+									>
+										A landingpage for a marketing agency
+									</h3>
+								</hgroup>
+								<div>
+									<ul class="list-unstyled d-flex flex-wrap">
+										<li class="me-3">
+											<strong>ANGULAR</strong>
+										</li>
+										<li class="me-3">
+											<strong>SCSS</strong>
+										</li>
+										<li class="me-3">
+											<strong>JASMINE</strong>
+										</li>
+										<li><strong>CYPRESS</strong></li>
+									</ul>
+									<a
+										href="/dezvu"
+										class="btn btn-dark mt-3"
+										target="_blank"
+										data-hover="true"
+									>
+										<span class="me-2">View Site</span>
+										<i class="bi bi-box-arrow-up-right"></i>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li
+							tabindex="0"
+							class="portfolio__projects__item col-lg"
+						>
+							<img
+								class="portfolio__projects__item__img"
+								src="./img/drivenow-mockup.jpg"
+								alt="Mockup of Studone Project landing page"
+							/>
+							<div class="portfolio__projects__item__content">
+								<hgroup>
+									<h4
+										class="portfolio__projects__item__content__heding"
+									>
+										Drivenow
+									</h4>
+									<h3
+										class="portfolio__projects__item__content__descripition"
+									>
+										A landingpage for car rental company
+									</h3>
+								</hgroup>
+								<div>
+									<ul class="list-unstyled d-flex flex-wrap">
+										<li class="me-3">
+											<strong>NEXT JS</strong>
+										</li>
+										<li><strong>TAILWIND CSS</strong></li>
+									</ul>
+									<a
+										href="/drivenow"
+										class="btn btn-dark mt-3"
+										data-hover="true"
+										target="_blank"
+									>
+										<span class="me-2">View Site</span>
+										<i class="bi bi-box-arrow-up-right"></i>
+									</a>
+								</div>
+							</div>
+						</li>
+					</div>
+				</ul>
+			</section>
+			<!--  END PORTFOLIO -->
+
+			<!--  START CONTACT -->
+			<section id="contact" class="contact container">
+				<div class="row gap-5">
+					<div class="col-lg-4 relative">
+						<img
+							class="contact__img"
+							src="./img/messaging.svg"
+							alt="Illustration of a phone with messages on screen"
+						/>
+					</div>
+					<div class="col-lg-7">
+						<h2 class="heading-1">Let's Talk</h2>
+						<form action="#" class="c-form">
+							<div>
+								<label for="name" class="c-form__label"
+									>Full Name</label
+								>
+								<input
+									type="text"
+									name="name"
+									id="form-name"
+									class="c-form__input"
+								/>
+							</div>
+							<div>
+								<label for="email" class="c-form__label"
+									>E-Mail</label
+								>
+								<input
+									type="email"
+									name="email"
+									id="form-email"
+									class="c-form__input"
+								/>
+							</div>
+							<div>
+								<label for="message" class="c-form__label"
+									>Message</label
+								>
+								<textarea
+									type="message"
+									name="message"
+									id="form-message"
+									class="c-form__input"
+								></textarea>
+							</div>
+							<button
+								type="submit"
+								class="btn c-submit"
+								data-hover="true"
+							>
+								Send
+							</button>
+						</form>
+					</div>
+				</div>
+				<ul class="list-unstyled row text-center contact__info">
+					<li class="col-lg">
+						<a
+							href="https://goo.gl/maps/RQJuJT8XUodSjWc28"
+							class="contact__info__item"
+							target="_blank"
+							data-hover="true"
+						>
+							<i class="bi bi-geo-alt-fill"></i>
+							<span>Krems An Der Donau, Austria</span>
+						</a>
+					</li>
+					<li class="col-lg">
+						<a
+							href="tel:+436603874892"
+							class="contact__info__item"
+							data-hover="true"
+						>
+							<i class="bi bi-phone-vibrate-fill"></i>
+							<span>+43 660 387 4892</span>
+						</a>
+					</li>
+					<li class="col-lg">
+						<a
+							href="mailto:stanciu.ruben20@gmail.com"
+							class="contact__info__item"
+							data-hover="true"
+						>
+							<i class="bi bi-send-fill"></i>
+							<span>stanciu.ruben20@gmail.com</span>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<!--  END CONTACT -->
+
+			<footer class="py-2">
+				<p class="container pt-4">
+					Developed with love by <strong>Ruben Stanciu</strong> © 2023
+				</p>
+			</footer>
+		</main>
+
+		<!-- START CURSOR -->
+		<div id="cursor-1"></div>
+		<div id="cursor-2"></div>
+		<!-- END CURSOR -->
+
+		<script src="./js/bootstrap-bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
