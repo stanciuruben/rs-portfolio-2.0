@@ -33,7 +33,7 @@ function sendMail(e) {
 		return;
 	}
 
-	var URL = 'http://localhost:3421/';
+	var URL = 'https://www.rubenstanciu.com/sendmail';
 
 	sendRequest(
 		URL,
