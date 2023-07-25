@@ -97,3 +97,11 @@ var tooltipTriggerList = [].slice.call(
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 	return new bootstrap.Tooltip(tooltipTriggerEl);
 });
+
+// Contact Modal
+
+var contactModal = document.getElementById('contact-modal');
+var contactModalDismiss = document.getElementById('contact-modal__dismiss');
+addEvent(contactModalDismiss, 'click', function () {
+	contactModal.close();
+});

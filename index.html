@@ -493,7 +493,7 @@
 
 			<!--  START CONTACT -->
 			<section id="contact" class="contact container">
-				<div class="row gap-5">
+				<div id="contact-form-container" class="row gap-5">
 					<div class="col-lg-4 relative">
 						<img
 							class="contact__img"
@@ -580,6 +580,22 @@
 						</a>
 					</li>
 				</ul>
+				<dialog id="contact-modal">
+					<h3 id="contact-modal__title" class="break-words"></h3>
+					<ul
+						id="contact-modal__info"
+						class="list-unstyled text-danger"
+					></ul>
+					<div class="d-flex justify-content-end">
+						<button
+							id="contact-modal__dismiss"
+							type="button"
+							class="btn"
+						>
+							Close
+						</button>
+					</div>
+				</dialog>
 			</section>
 			<!--  END CONTACT -->
 

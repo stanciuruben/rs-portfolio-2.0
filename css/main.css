@@ -416,6 +416,16 @@ main {
 	margin-right: 1rem;
 }
 
+#contact-modal {
+	max-width: 30rem;
+	background-color: var(--white);
+	border: none;
+}
+
+#contact-modal::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media screen and (max-width: 992px) {
 	.contact__img {
 		display: none;
