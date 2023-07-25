@@ -33,7 +33,7 @@ function sendMail(e) {
 		return;
 	}
 
-	var URL = 'https://www.rubenstanciu.com/sendmail';
+	var URL = 'https://www.rubenstanciu.com/sendmail/';
 
 	sendRequest(
 		URL,
